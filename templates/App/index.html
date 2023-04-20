@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Random Number Generator</title>
+    <script>
+        function updateDisplays() {
+            fetch('/display_data/')
+                .then(response => response.json())
+                .then(data => {
+                    for (const [key, value] of Object.entries(data)) {
+                        document.getElementById(key).textContent = value;
+                    }
+                })
+                .catch(error => console.error(error));
+        }
+
+        setInterval(updateDisplays, 1000);
+    </script>
+</head>
+<body>
+    <h1>Random Number Generator</h1>
+    <p>D1: <span id="D1">{{ D1 }}</span></p>
+    <p>D2: <span id="D2">{{ D2 }}</span></p>
+    <p>D3: <span id="D3">{{ D3 }}</span></p>
+    <p>D4: <span id="D4">{{ D4 }}</span></p>
+    <p>D5: <span id="D5">{{ D5 }}</span></p>
+    <p>D6: <span id="D6">{{ D6 }}</span></p>
+</body>
+</html>

@@ -1,0 +1,2 @@
+## Project Description
+Django MultiThreaded Display Updater is a web application built using the Django web framework. It allows users to manage and update multiple displays simultaneously. The application features a multi-threaded architecture to ensure smooth and seamless updates for each display at their respective time intervals.
